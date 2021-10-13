@@ -1,0 +1,47 @@
+.section {
+   margin-top: 120px;
+   margin-bottom: 80px;
+}
+
+.services-background {
+   background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#020024),
+      color-stop(41%, #2c2640),
+      to(#544d6d)
+   );
+   background: linear-gradient(
+      to bottom,
+      #020024 0%,
+      #2c2640 41%,
+      #544d6d 100%
+   );
+   height: fit-content;
+   min-height: 500px;
+}
+
+.services-background-img-left {
+   max-height: 500px;
+}
+.services-background-img-right {
+   max-height: 500px;
+}
+
+.hr-underline-pink {
+   display: block;
+   margin-left: 30%;
+   margin-right: 30%;
+   border-bottom: 2px solid #9e96c6;
+}
+
+@media (max-width: 812px) {
+   .services-background-img-left {
+      max-width: 10em;
+   }
+
+   .services-background-img-right {
+      max-width: 15em;
+   }
+}
