@@ -12,8 +12,8 @@ function App() {
       <Layout>
          <Switch>
             <Route path="/about" component={AboutUsPage} />
-            <Route path="/contact" component={ContactUsPage} />
             <Route path="/services" component={ServicesPage} />
+            <Route path="/contact" component={ContactUsPage} />
             <Route path="/" component={HomePage} />
          </Switch>
       </Layout>

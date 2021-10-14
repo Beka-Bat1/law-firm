@@ -1,9 +1,19 @@
 import React from 'react';
+import {useHistory} from 'react-router-dom';
+
 import {FindOutMore} from 'components';
+
 import AboutCover from '@img/group.jpg';
+
 import './styles.css';
 
 function AboutUsPage() {
+   const history = useHistory();
+
+   const handleClick = () => {
+      history.push('/contact');
+   };
+
    return (
       <>
          <div
@@ -54,9 +64,7 @@ function AboutUsPage() {
                         "If you can't find what you are looking for, explore."
                      }
                      buttonText={'Find Out More'}
-                     onClick={() => {
-                        alert('Find Out');
-                     }}
+                     onClick={handleClick}
                   />
                </div>
             </div>

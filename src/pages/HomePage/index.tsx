@@ -7,8 +7,15 @@ import {
    AboutUsSection,
    OurServicesSection,
 } from 'components';
+import {useHistory} from 'react-router-dom';
 
 function HomePage() {
+   const history = useHistory();
+
+   const handleClick = () => {
+      history.push('/about');
+   };
+
    return (
       <>
          <WelcomeSection />
@@ -19,9 +26,7 @@ function HomePage() {
          <FindOutMore
             textLeft="Find out more about how we work"
             buttonText="Contact Us"
-            onClick={() => {
-               alert('contact us');
-            }}
+            onClick={handleClick}
          />
       </>
    );

@@ -1,9 +1,31 @@
 import React from 'react';
-import {FindOutMore} from 'components';
+import {FindOutMore, ContactSection} from 'components';
+import ContactCard from 'components/ContactCard';
+
 import ContactCover from '@img/contact.jpg';
 import './styles.css';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {
+   faEnvelope,
+   faLocationArrow,
+   faPhoneAlt,
+} from '@fortawesome/free-solid-svg-icons';
 
 function ContactUsPage() {
+   const contactList = [
+      {
+         icon: faPhoneAlt,
+         text: '+555 555 555 555',
+      },
+      {
+         icon: faEnvelope,
+         text: 'example@gmail.com',
+      },
+      {
+         icon: faLocationArrow,
+         text: 'Tbilisi, Georgia',
+      },
+   ];
    return (
       <>
          <div
@@ -16,7 +38,7 @@ function ContactUsPage() {
          <div className="container-fluid">
             <div className="container section">
                <div className="row section">
-                  <div className="col-6 ms-auto">
+                  <div className="col-md-6 col-sm-12 ms-auto">
                      <p className="fs-3 text-start">
                         Lorem, ipsum dolor sit amet consectetur adipisicing
                         elit. Illum magnam itaque earum in alias, exercitationem
@@ -27,37 +49,16 @@ function ContactUsPage() {
                </div>
 
                <div className="row section">
-                  <div className="col-12">
-                     <p className="fs-4 mb-5">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Laborum sequi commodi, temporibus consequatur impedit,
-                        tenetur quia eligendi sed nobis quibusdam reiciendis
-                        illo ullam. Rem labore quibusdam quaerat.
-                     </p>
-                     <p className="fs-4 mb-5">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Laborum sequi commodi, temporibus consequatur impedit,
-                        tenetur quia eligendi sed nobis quibusdam reiciendis
-                        illo ullam. Rem labore quibusdam quaerat.
-                     </p>
-                     <p className="fs-4 mb-5">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Laborum sequi commodi, temporibus consequatur impedit,
-                        tenetur quia eligendi sed nobis quibusdam reiciendis
-                        illo ullam. Rem labore quibusdam quaerat.
-                     </p>
+                  <div className="col-md-6 col-sm-12">
+                     {contactList.map((item) => (
+                        <div className="my-5">
+                           <ContactCard icon={item.icon} text={item.text} />
+                        </div>
+                     ))}
                   </div>
                </div>
                <div className="row ">
-                  <FindOutMore
-                     textLeft={
-                        "If you can't find what you are looking for, explore."
-                     }
-                     buttonText={'Find Out More'}
-                     onClick={() => {
-                        alert('Find Out');
-                     }}
-                  />
+                  <ContactSection />
                </div>
             </div>
          </div>

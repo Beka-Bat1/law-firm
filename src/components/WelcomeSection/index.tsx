@@ -1,5 +1,6 @@
 import React from 'react';
 import {useTranslation} from 'react-i18next';
+import {useHistory} from 'react-router';
 
 import useWindowDimensions from 'utils/getWindow';
 
@@ -12,6 +13,12 @@ import './styles.css';
 function WelcomeSection() {
    const {t} = useTranslation();
    const {width} = useWindowDimensions();
+
+   const history = useHistory();
+
+   const handleClick = () => {
+      history.push('/contact');
+   };
 
    return (
       <div className="welcome-section">
@@ -53,7 +60,9 @@ function WelcomeSection() {
                      voluptatem architecto
                   </p>
                   <span>
-                     <button className="btn btn-lg btn-primary btn-white-primary my-md-5">
+                     <button
+                        className="btn btn-lg btn-primary btn-white-primary my-md-5"
+                        onClick={handleClick}>
                         Ask For Call
                      </button>
                   </span>
