@@ -6,22 +6,26 @@ import InfoCard from 'components/InfoCard';
 import SnappyIcon from '@img/icon-snappy-process.svg';
 import AffordableIcon from '@img/icon-affordable-prices.svg';
 import PeopleIcon from '@img/icon-people-first.svg';
+import {TextEnum} from 'constants/TextEnum';
+import {useTranslation} from 'react-i18next';
 
 function WeAreDifferent() {
+   const {t} = useTranslation();
+
    const info = [
       {
-         header: 'Snappy Process',
-         text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, dicta quasi similique nam ducimus suscipit quis voluptatem alias',
+         header: t(TextEnum.home_intro_card_header_1),
+         text: t(TextEnum.home_intro_card_text_1),
          icon: SnappyIcon,
       },
       {
-         header: 'Affordable prices',
-         text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, dicta quasi similique nam ducimus suscipit quis voluptatem alias',
+         header: t(TextEnum.home_intro_card_header_2),
+         text: t(TextEnum.home_intro_card_text_2),
          icon: AffordableIcon,
       },
       {
-         header: 'People First',
-         text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, dicta quasi similique nam ducimus suscipit quis voluptatem alias',
+         header: t(TextEnum.home_intro_card_header_3),
+         text: t(TextEnum.home_intro_card_text_3),
          icon: PeopleIcon,
       },
    ];
@@ -31,7 +35,9 @@ function WeAreDifferent() {
          <div className="py-5">
             <div className=" col-sm-5 my-4 text-wrap align-middle d-flex flex-column">
                <span className="hr-line-pink my-3"></span>
-               <h1 className="welcome-header">We are Different</h1>
+               <h1 className="welcome-header">
+                  {t(TextEnum.home_intro_header)}
+               </h1>
             </div>
 
             <div className="d-flex justify-content-between flex-nowrap ">

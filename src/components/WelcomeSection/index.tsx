@@ -9,6 +9,7 @@ import IntroLeft from '@img/bg-pattern-intro-left-desktop.svg';
 import BackgroundPatternRight from '@img/bg-pattern-intro-right-desktop.svg';
 
 import './styles.css';
+import {TextEnum} from 'constants/TextEnum';
 
 function WelcomeSection() {
    const {t} = useTranslation();
@@ -52,18 +53,17 @@ function WelcomeSection() {
                style={{position: 'relative', zIndex: 1}}>
                <div className=" col-sm-6 pt-md-5 pt-sm-4 ms-5 mt-md-1 text-wrap align-middle me-auto d-flex flex-column">
                   <span className="hr-line my-4"></span>
-                  <h1 className="welcome-header">{t('welcome_header')}</h1>
+                  <h1 className="welcome-header">
+                     {t(TextEnum.home_welcome_header)}
+                  </h1>
                   <p className="text-left mt-3">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Dolorem dolorum a cupiditate laboriosam aliquam porro quasi
-                     consectetur perspiciatis provident pariatur adipisci odit
-                     voluptatem architecto
+                     {t(TextEnum.home_welcome_cotitle)}
                   </p>
                   <span>
                      <button
                         className="btn btn-lg btn-primary btn-white-primary my-md-5"
                         onClick={handleClick}>
-                        Ask For Call
+                        {t(TextEnum.home_welcome_button)}
                      </button>
                   </span>
                </div>

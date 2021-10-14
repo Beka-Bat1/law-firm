@@ -8,9 +8,12 @@ import {
    OurServicesSection,
 } from 'components';
 import {useHistory} from 'react-router-dom';
+import {useTranslation} from 'react-i18next';
+import {TextEnum} from 'constants/TextEnum';
 
 function HomePage() {
    const history = useHistory();
+   const {t} = useTranslation();
 
    const handleClick = () => {
       history.push('/about');
@@ -24,8 +27,8 @@ function HomePage() {
          <OurServicesSection />
          <ContactSection />
          <FindOutMore
-            textLeft="Find out more about how we work"
-            buttonText="Contact Us"
+            textLeft={t(TextEnum.home_footer_banner_header_left)}
+            buttonText={t(TextEnum.home_footer_banner_button)}
             onClick={handleClick}
          />
       </>

@@ -5,44 +5,55 @@ import {useHistory} from 'react-router-dom';
 import ServicesCover from '@img/services.jpg';
 
 import './styles.css';
+import {useTranslation} from 'react-i18next';
+import {TextEnum} from 'constants/TextEnum';
 
 function ServicesPage() {
    const history = useHistory();
+   const {t} = useTranslation();
 
    const accordionData = [
       {
-         headerLeft: 'Banking and Financial Service',
-         practiceCount: 3,
-         text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, aspernatur possimus. Placeat at eveniet, veniam consequuntur, repellendus officiis magnam expedita qui provident laborum debitis commodi cupiditate alias voluptatum repudiandae quibusdam.',
+         headerLeft: t(TextEnum.services_acordion_header_left_1),
+         practiceCount: t(TextEnum.services_acordion_practise_count_1),
+         practiceText: t(TextEnum.services_acordion_practise_name_1),
+         text: t(TextEnum.services_acordion_practise_text_1),
       },
       {
-         headerLeft: 'Banking and Financial Service',
-         practiceCount: 3,
-         text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, aspernatur possimus. Placeat at eveniet, veniam consequuntur, repellendus officiis magnam expedita qui provident laborum debitis commodi cupiditate alias voluptatum repudiandae quibusdam.',
+         headerLeft: t(TextEnum.services_acordion_header_left_2),
+         practiceCount: t(TextEnum.services_acordion_practise_count_2),
+         practiceText: t(TextEnum.services_acordion_practise_name_2),
+         text: t(TextEnum.services_acordion_practise_text_2),
       },
       {
-         headerLeft: 'Banking and Financial Service',
-         practiceCount: 3,
-         text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, aspernatur possimus. Placeat at eveniet, veniam consequuntur, repellendus officiis magnam expedita qui provident laborum debitis commodi cupiditate alias voluptatum repudiandae quibusdam.',
+         headerLeft: t(TextEnum.services_acordion_header_left_3),
+         practiceCount: t(TextEnum.services_acordion_practise_count_3),
+         practiceText: t(TextEnum.services_acordion_practise_name_3),
+         text: t(TextEnum.services_acordion_practise_text_3),
       },
       {
-         headerLeft: 'Banking and Financial Service',
-         text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, aspernatur possimus. Placeat at eveniet, veniam consequuntur, repellendus officiis magnam expedita qui provident laborum debitis commodi cupiditate alias voluptatum repudiandae quibusdam.',
+         headerLeft: t(TextEnum.services_acordion_header_left_4),
+         practiceCount: t(TextEnum.services_acordion_practise_count_4),
+         practiceText: t(TextEnum.services_acordion_practise_name_4),
+         text: t(TextEnum.services_acordion_practise_text_4),
       },
       {
-         headerLeft: 'Banking and Financial Service',
-         practiceCount: 3,
-         text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, aspernatur possimus. Placeat at eveniet, veniam consequuntur, repellendus officiis magnam expedita qui provident laborum debitis commodi cupiditate alias voluptatum repudiandae quibusdam.',
+         headerLeft: t(TextEnum.services_acordion_header_left_5),
+         practiceCount: t(TextEnum.services_acordion_practise_count_5),
+         practiceText: t(TextEnum.services_acordion_practise_name_5),
+         text: t(TextEnum.services_acordion_practise_text_5),
       },
       {
-         headerLeft: 'Banking and Financial Service',
-         practiceCount: 3,
-         text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, aspernatur possimus. Placeat at eveniet, veniam consequuntur, repellendus officiis magnam expedita qui provident laborum debitis commodi cupiditate alias voluptatum repudiandae quibusdam.',
+         headerLeft: t(TextEnum.services_acordion_header_left_6),
+         practiceCount: t(TextEnum.services_acordion_practise_count_6),
+         practiceText: t(TextEnum.services_acordion_practise_name_6),
+         text: t(TextEnum.services_acordion_practise_text_6),
       },
       {
-         headerLeft: 'Banking and Financial Service',
-         practiceCount: 3,
-         text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, aspernatur possimus. Placeat at eveniet, veniam consequuntur, repellendus officiis magnam expedita qui provident laborum debitis commodi cupiditate alias voluptatum repudiandae quibusdam.',
+         headerLeft: t(TextEnum.services_acordion_header_left_7),
+         practiceCount: t(TextEnum.services_acordion_practise_count_7),
+         practiceText: t(TextEnum.services_acordion_practise_name_7),
+         text: t(TextEnum.services_acordion_practise_text_7),
       },
    ];
 
@@ -56,20 +67,29 @@ function ServicesPage() {
             className="image-container d-flex"
             style={{backgroundImage: `url(${ServicesCover})`}}>
             <p className="aboutus-header fs-1 fw-bold text-white mt-auto">
-               Our Services
+               {t(TextEnum.services_cover_header)}
             </p>
          </div>
          <div className="container-fluid">
             <div className="container section">
                <div className="row section">
                   <div className="col-6">
-                     <p className="fs-3 text-start">Service</p>
+                     <p className="fs-3 text-start">
+                        {' '}
+                        {t(TextEnum.services_row_header_1)}
+                     </p>
                   </div>
                   <div className="col-3">
-                     <p className="fs-3 text-center">Practice</p>
+                     <p className="fs-3 text-center">
+                        {' '}
+                        {t(TextEnum.services_row_header_2)}
+                     </p>
                   </div>
                   <div className="col-3">
-                     <p className="fs-3 text-end">Open</p>
+                     <p className="fs-3 text-end">
+                        {' '}
+                        {t(TextEnum.services_row_header_3)}
+                     </p>
                   </div>
                </div>
             </div>
@@ -91,7 +111,8 @@ function ServicesPage() {
                               </div>
                               <div className="col-3">
                                  <p className="fs-4 text-center">
-                                    {item.practiceCount || 0} Practices
+                                    {item.practiceCount || 0}{' '}
+                                    {item.practiceText}
                                  </p>
                               </div>
                               <div className="col-3">
@@ -133,10 +154,8 @@ function ServicesPage() {
 
             <div className="container section">
                <FindOutMore
-                  textLeft={
-                     "If you can't find what you are looking for, explore."
-                  }
-                  buttonText={'Find Out More'}
+                  textLeft={t(TextEnum.services_footer_banner_header_left)}
+                  buttonText={t(TextEnum.services_footer_banner_button)}
                   onClick={handleClick}
                />
             </div>

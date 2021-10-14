@@ -10,20 +10,23 @@ import {
    faLocationArrow,
    faPhoneAlt,
 } from '@fortawesome/free-solid-svg-icons';
+import {useTranslation} from 'react-i18next';
+import {TextEnum} from 'constants/TextEnum';
 
 function ContactUsPage() {
+   const {t} = useTranslation();
    const contactList = [
       {
          icon: faPhoneAlt,
-         text: '+555 555 555 555',
+         text: t(TextEnum.contact_info_mobile),
       },
       {
          icon: faEnvelope,
-         text: 'example@gmail.com',
+         text: t(TextEnum.contact_info_mail),
       },
       {
          icon: faLocationArrow,
-         text: 'Tbilisi, Georgia',
+         text: t(TextEnum.contact_info_location),
       },
    ];
    return (
@@ -32,7 +35,7 @@ function ContactUsPage() {
             className="image-container d-flex"
             style={{backgroundImage: `url(${ContactCover})`}}>
             <p className="aboutus-header fs-1 fw-bold text-white mt-auto">
-               Contact Us
+               {t(TextEnum.contact_cover_header)}
             </p>
          </div>
          <div className="container-fluid">
@@ -40,10 +43,7 @@ function ContactUsPage() {
                <div className="row section">
                   <div className="col-md-6 col-sm-12 ms-auto">
                      <p className="fs-3 text-start">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Illum magnam itaque earum in alias, exercitationem
-                        ad neque dolorum dolores placeat fuga officiis nemo qui
-                        eligendi eveniet sed esse mollitia laborum.
+                        {t(TextEnum.contact_intro_text_right)}
                      </p>
                   </div>
                </div>
