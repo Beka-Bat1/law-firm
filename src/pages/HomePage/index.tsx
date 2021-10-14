@@ -16,7 +16,13 @@ function HomePage() {
          <AboutUsSection />
          <OurServicesSection />
          <ContactSection />
-         <FindOutMore />
+         <FindOutMore
+            textLeft="Find out more about how we work"
+            buttonText="Contact Us"
+            onClick={() => {
+               alert('contact us');
+            }}
+         />
       </>
    );
 }
