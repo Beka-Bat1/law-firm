@@ -57,6 +57,6 @@
   },
   "devDependencies": {
     "@types/luxon": "^2.0.4",
-    "@types/react-router-dom": "^5.1.9"
+    "@types/react-router-dom": "^5.3.1"
   }
 }
