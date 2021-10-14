@@ -2,9 +2,12 @@ import React from 'react';
 
 import AboutUsImage from '@img/aboutUs.jpg';
 import {useHistory} from 'react-router';
+import {useTranslation} from 'react-i18next';
+import {TextEnum} from 'constants/TextEnum';
 
 function AboutUsSection() {
    const history = useHistory();
+   const {t} = useTranslation();
 
    const handleClick = () => {
       history.push('/about');
@@ -12,19 +15,18 @@ function AboutUsSection() {
    return (
       <div className="container d-flex flex-row section  ">
          <div className="container col-6 d-flex flex-column align-center justify-content-between">
-            <h1 className="text-start">About Us</h1>
+            <h1 className="text-start">
+               {t(TextEnum.home_about_section_header)}
+            </h1>
             <p className="text-start me-5">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Dignissimos eos dicta ipsam at maiores minus, a ipsa! Voluptatem,
-               sit porro veritatis harum sequi molestias facere eaque quo
-               laborum inventore at? Lorem ipsum dolor sit amet consectetur.
+               {t(TextEnum.home_about_section_text)}
             </p>
 
             <span>
                <button
                   className="btn btn-lg btn-primary btn-colored-primary"
                   onClick={handleClick}>
-                  Find Out
+                  {t(TextEnum.home_about_section_button)}
                </button>
             </span>
          </div>

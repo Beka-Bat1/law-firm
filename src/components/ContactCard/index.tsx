@@ -20,7 +20,9 @@ function ContactCard({text = '', icon}: Props) {
             </div>
          )}
 
-         <p className="info-card-text fs-3 my-2">{text}</p>
+         <div className="d-flex align-items-center">
+            <p className="info-card-text fs-3 my-2">{text}</p>
+         </div>
       </div>
    );
 }

@@ -8,49 +8,52 @@ import BackgroundIcon from '@img/bg-pattern-intro-left-desktop.svg';
 import BackgroundRight from '@img/bg-pattern-intro-right-desktop.svg';
 
 import './styles.css';
+import {useTranslation} from 'react-i18next';
+import {TextEnum} from 'constants/TextEnum';
 
 function OurServicesSection() {
    const history = useHistory();
+   const {t} = useTranslation();
 
    const services = [
       {
-         header: 'Services header',
-         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit velit asdasdasdasdasdasdasdasdasdasdasssssssssssssssssssssssssssssssss.',
+         header: t(TextEnum.home_services_card_header_1),
+         text: t(TextEnum.home_services_card_text_1),
          icon: faUniversity,
       },
       {
-         header: 'Services header',
-         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit velit.',
+         header: t(TextEnum.home_services_card_header_2),
+         text: t(TextEnum.home_services_card_text_2),
          icon: faUniversity,
       },
       {
-         header: 'Services header',
-         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit velit.',
+         header: t(TextEnum.home_services_card_header_3),
+         text: t(TextEnum.home_services_card_text_3),
          icon: faUniversity,
       },
       {
-         header: 'Services header',
-         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit velit.',
+         header: t(TextEnum.home_services_card_header_4),
+         text: t(TextEnum.home_services_card_text_4),
          icon: faUniversity,
       },
       {
-         header: 'Services header',
-         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit velit.',
+         header: t(TextEnum.home_services_card_header_5),
+         text: t(TextEnum.home_services_card_text_5),
          icon: faUniversity,
       },
       {
-         header: 'Services header',
-         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit velit.',
+         header: t(TextEnum.home_services_card_header_6),
+         text: t(TextEnum.home_services_card_text_6),
          icon: faUniversity,
       },
       {
-         header: 'Services header',
-         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit velit. asdjnbsadjnnjkansdkjnajsndkjaskjdblkabjsdkjasb; ajsbf;jdsbf;kjsdbfkjbsdkfjbsdkfjbdksjfkjb',
+         header: t(TextEnum.home_services_card_header_7),
+         text: t(TextEnum.home_services_card_text_7),
          icon: faUniversity,
       },
       {
-         header: 'Services header',
-         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit velit.',
+         header: t(TextEnum.home_services_card_header_8),
+         text: t(TextEnum.home_services_card_text_8),
          icon: faUniversity,
       },
    ];
@@ -61,7 +64,9 @@ function OurServicesSection() {
 
    return (
       <div className="container section">
-         <h1 className="text-center">Our Services</h1>
+         <h1 className="text-center">
+            {t(TextEnum.home_services_section_header)}
+         </h1>
          <span className="hr-underline-pink"></span>
          <div className="container services-background my-5 pb-4 pt-2">
             <div
@@ -93,7 +98,7 @@ function OurServicesSection() {
                <button
                   className="btn btn-lg btn-primary btn-white-primary"
                   onClick={handleClick}>
-                  See More
+                  {t(TextEnum.home_services_section_button)}
                </button>
                {/* </Link> */}
             </span>
