@@ -1,7 +1,8 @@
 import React from 'react';
 import {faUniversity} from '@fortawesome/free-solid-svg-icons';
-
+import {Link} from 'react-router-dom';
 import {ServicesCard} from 'components';
+import {useHistory} from 'react-router-dom';
 
 import BackgroundIcon from '@img/bg-pattern-intro-left-desktop.svg';
 import BackgroundRight from '@img/bg-pattern-intro-right-desktop.svg';
@@ -9,6 +10,8 @@ import BackgroundRight from '@img/bg-pattern-intro-right-desktop.svg';
 import './styles.css';
 
 function OurServicesSection() {
+   const history = useHistory();
+
    const services = [
       {
          header: 'Services header',
@@ -52,6 +55,10 @@ function OurServicesSection() {
       },
    ];
 
+   function handleClick() {
+      history.push('/services');
+   }
+
    return (
       <div className="container section">
          <h1 className="text-center">Our Services</h1>
@@ -82,9 +89,13 @@ function OurServicesSection() {
                ))}
             </div>
             <span className="d-flex align-items-center justify-content-center">
-               <button className="btn btn-lg btn-primary btn-white-primary">
+               {/* <Link to={'/services'}> */}
+               <button
+                  className="btn btn-lg btn-primary btn-white-primary"
+                  onClick={handleClick}>
                   See More
                </button>
+               {/* </Link> */}
             </span>
          </div>
       </div>

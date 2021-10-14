@@ -1,11 +1,14 @@
 import React from 'react';
 import {FindOutMore} from 'components';
+import {useHistory} from 'react-router-dom';
 
 import ServicesCover from '@img/services.jpg';
 
 import './styles.css';
 
 function ServicesPage() {
+   const history = useHistory();
+
    const accordionData = [
       {
          headerLeft: 'Banking and Financial Service',
@@ -42,6 +45,10 @@ function ServicesPage() {
          text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, aspernatur possimus. Placeat at eveniet, veniam consequuntur, repellendus officiis magnam expedita qui provident laborum debitis commodi cupiditate alias voluptatum repudiandae quibusdam.',
       },
    ];
+
+   const handleClick = () => {
+      history.push('/contact');
+   };
 
    return (
       <>
@@ -89,7 +96,7 @@ function ServicesPage() {
                               </div>
                               <div className="col-3">
                                  <button
-                                    className="accordion-button collapsed caret-button "
+                                    className="accordion-button collapsed caret-button"
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target={`#flush-collapse${index}`}
@@ -130,9 +137,7 @@ function ServicesPage() {
                      "If you can't find what you are looking for, explore."
                   }
                   buttonText={'Find Out More'}
-                  onClick={() => {
-                     alert('Find Out');
-                  }}
+                  onClick={handleClick}
                />
             </div>
          </div>

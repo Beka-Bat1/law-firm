@@ -1,8 +1,14 @@
 import React from 'react';
 
 import AboutUsImage from '@img/aboutUs.jpg';
+import {useHistory} from 'react-router';
 
 function AboutUsSection() {
+   const history = useHistory();
+
+   const handleClick = () => {
+      history.push('/about');
+   };
    return (
       <div className="container d-flex flex-row section  ">
          <div className="container col-6 d-flex flex-column align-center justify-content-between">
@@ -15,7 +21,9 @@ function AboutUsSection() {
             </p>
 
             <span>
-               <button className="btn btn-lg btn-primary btn-colored-primary">
+               <button
+                  className="btn btn-lg btn-primary btn-colored-primary"
+                  onClick={handleClick}>
                   Find Out
                </button>
             </span>

@@ -50,11 +50,6 @@ const NavBar = () => {
                      </Link>
                   </li>
                   <li className="nav-item">
-                     <Link className="nav-link" href="#" to={'/gallery'}>
-                        გალერეა
-                     </Link>
-                  </li>
-                  <li className="nav-item">
                      <Link className="nav-link" href="#" to={'/contact'}>
                         კონტაქტი
                      </Link>

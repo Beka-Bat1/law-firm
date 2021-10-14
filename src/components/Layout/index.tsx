@@ -12,7 +12,12 @@ const Layout = (props: LayoutProps) => {
          <div>
             <NavBar />
          </div>
-         <main>{props.children}</main>
+         <main
+            style={{
+               scrollBehavior: 'smooth',
+            }}>
+            {props.children}
+         </main>
 
          <div>
             <Footer />

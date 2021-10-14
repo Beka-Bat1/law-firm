@@ -3,4 +3,5 @@ export const enum ColorList {
    Pink = '#9e96c6',
    BackgroundColor = '#2c2640',
    Gray = '#F8F9FA',
+   White = '#fff',
 }
