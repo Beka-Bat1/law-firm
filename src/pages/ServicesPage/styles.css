@@ -1,0 +1,18 @@
+.separator {
+   border-top: 2px solid #b8b8b8;
+}
+.card-header.collapsed {
+   background: #ccc;
+}
+.card-header:not(.collapsed) {
+   background: #ee6666;
+}
+.caret-button {
+   background: none;
+   color: inherit;
+   border: none;
+   padding: 0;
+   font: inherit;
+   cursor: pointer;
+   outline: inherit;
+}
