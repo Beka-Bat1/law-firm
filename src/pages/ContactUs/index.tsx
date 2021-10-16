@@ -1,10 +1,9 @@
 import React from 'react';
-import {FindOutMore, ContactSection} from 'components';
+import {ContactSection} from 'components';
 import ContactCard from 'components/ContactCard';
 
 import ContactCover from '@img/contact.jpg';
 import './styles.css';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
    faEnvelope,
    faLocationArrow,

@@ -1,6 +1,5 @@
 import React from 'react';
 import {faUniversity} from '@fortawesome/free-solid-svg-icons';
-import {Link} from 'react-router-dom';
 import {ServicesCard} from 'components';
 import {useHistory} from 'react-router-dom';
 
