@@ -22,7 +22,7 @@ function FindOutMore(props: Props) {
             />
          </div>
          <div
-            className="findout-top-container container px-5 d-flex align-items-center justify-content-between h-100"
+            className="flex-column flex-md-row py-3 container px-5  d-flex align-items-center justify-content-between h-100"
             style={{position: 'relative', zIndex: 4}}>
             <div className="ms-3 col-md-4 col-sm-6">
                <h1 className="text-wrap">{textLeft}</h1>

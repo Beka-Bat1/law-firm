@@ -40,7 +40,7 @@ function WeAreDifferent() {
                </h1>
             </div>
 
-            <div className="d-flex justify-content-between flex-nowrap ">
+            <div className="d-flex flex-column flex-md-row justify-content-between flex-nowrap ">
                {info.map((i) => (
                   <div className="mx-2">
                      <InfoCard header={i.header} text={i.text} icon={i.icon} />

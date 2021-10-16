@@ -25,9 +25,11 @@ function ContactSection() {
       <div className="contact-section container section">
          <div className="row dark-background">
             <div className="col-md-5 col-sm-5 col-xs-12 cotact-content">
-               <h1 className="text-white contact-us-text">
-                  {t(TextEnum.home_cotnact_us_section_header_left)}
-               </h1>
+               <div className="text-trancuate me-4">
+                  <h1 className="text-white contact-us-text ">
+                     {t(TextEnum.home_cotnact_us_section_header_left)}
+                  </h1>
+               </div>
             </div>
 
             <div className="col-md-7 col-sm-7 col-xs-12 contact-form p-md-5 p-sm-3">
