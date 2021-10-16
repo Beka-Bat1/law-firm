@@ -1,9 +1,6 @@
 {
   "name": "law-firm",
   "version": "0.1.0",
-  "engines": {
-    "node": "16.10.0"
-  },
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.3.0",
