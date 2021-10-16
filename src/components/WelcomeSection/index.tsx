@@ -2,8 +2,6 @@ import React from 'react';
 import {useTranslation} from 'react-i18next';
 import {useHistory} from 'react-router';
 
-import useWindowDimensions from 'utils/getWindow';
-
 import WelcomeImage from '@img/welcomeImage.jpg';
 import IntroLeft from '@img/bg-pattern-intro-left-desktop.svg';
 import BackgroundPatternRight from '@img/bg-pattern-intro-right-desktop.svg';
@@ -13,7 +11,6 @@ import {TextEnum} from 'constants/TextEnum';
 
 function WelcomeSection() {
    const {t} = useTranslation();
-   const {width} = useWindowDimensions();
 
    const history = useHistory();
 
