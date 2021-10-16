@@ -14,7 +14,7 @@ function ServicesCard(props: ServicesCardProps) {
    const {icon = '', header = '', text = ''} = props;
 
    return (
-      <div className="col-md-4 col-xs-12 p-4 text-truncate">
+      <div className="col-lg-4 col-md-6 col-sm-12 p-4 text-truncate">
          <div className="col-12 services-card flex-column text-white p-4 text-wrap text-truncate">
             <p className="text-center fs-3 fw-bolder text-wrap">{header}</p>
             <div className="d-flex flex-md-row">

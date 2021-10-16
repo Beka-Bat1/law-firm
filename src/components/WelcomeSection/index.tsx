@@ -32,7 +32,7 @@ function WelcomeSection() {
                   style={{
                      position: 'absolute',
                      zIndex: 1,
-                     right: width >= 1600 ? -width / 9 : -40,
+                     right: 0,
                      maxWidth: '300px',
                   }}
                />
@@ -49,13 +49,15 @@ function WelcomeSection() {
                />
             </div>
             <div
-               className="d-flex flex-column col-md-10 my-5 justify-content-evenly align-items-baseline "
+               className="d-flex flex-column h-100 col-md-10 my-5 align-items-baseline "
                style={{position: 'relative', zIndex: 1}}>
-               <div className=" col-sm-6 pt-md-5 pt-sm-4 ms-5 mt-md-1 text-wrap align-middle me-auto d-flex flex-column">
-                  <span className="hr-line my-4"></span>
-                  <h1 className="welcome-header">
-                     {t(TextEnum.home_welcome_header)}
-                  </h1>
+               <div className="h-75 col-sm-6 pt-md-5 pt-sm-4 ms-5 mt-md-1 text-wrap justify-content-evenly me-auto d-flex flex-column">
+                  <div>
+                     <span className="hr-line my-4"></span>
+                     <h1 className="welcome-header">
+                        {t(TextEnum.home_welcome_header)}
+                     </h1>
+                  </div>
                   <p className="text-left mt-3">
                      {t(TextEnum.home_welcome_cotitle)}
                   </p>
@@ -71,7 +73,7 @@ function WelcomeSection() {
          </div>
 
          <img
-            className="welcome-image img-fluid col-md-4 col-sm-6"
+            className="welcome-image img-fluid"
             alt="welcome_image"
             src={WelcomeImage}
          />
